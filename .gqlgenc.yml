@@ -1,0 +1,8 @@
+model:
+  filename: ./gen/models_gen.go
+client:
+  filename: ./gen/client.go
+endpoint:
+  url: http://localhost:8080/graphql
+query:
+  - "./query/*.graphql"

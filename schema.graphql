@@ -1,0 +1,10 @@
+type Moon {
+	id: ID!
+	name: String!
+}
+
+type Planet {
+	id: ID!
+	name: String!
+	moons: [Moon!]!
+}

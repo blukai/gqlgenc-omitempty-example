@@ -1,0 +1,24 @@
+fragment PlanetFragment on Planet {
+    id
+    name
+    moons {
+        id
+        name
+    }
+}
+
+mutation AddPlanet($input: [AddPlanetInput!]!) {
+    addPlanet(input: $input) {
+        planet {
+            ...PlanetFragment
+        }
+    }
+}
+
+mutation UpdatePlanet($input: UpdatePlanetInput!) {
+    updatePlanet(input: $input) {
+        planet {
+            ...PlanetFragment
+        }
+    }
+}
