@@ -20,23 +20,7 @@ run the example
 $ go run main.go
 ```
 
-and the response is fine
+and fail
 ```
-[]*gen.PlanetFragment{
-  &gen.PlanetFragment{
-    ID: "0x2e",
-    Name: "Jupiter",
-    Moons: []*struct { ID string "json:\"id\" graphql:\"id\""; Name string "json:\"name\" graphql:\"name\"" }{},
-  },
-  &gen.PlanetFragment{
-    ID: "0x2f",
-    Name: "Earth",
-    Moons: []*struct { ID string "json:\"id\" graphql:\"id\""; Name string "json:\"name\" graphql:\"name\"" }{
-      &struct { ID string "json:\"id\" graphql:\"id\""; Name string "json:\"name\" graphql:\"name\"" }{
-        ID: "0x30",
-        Name: "Moon",
-      },
-    },
-  },
-}
+{"networkErrors":null,"graphqlErrors":[{"message":"Non-nullable field 'name' (type String!) was not present in result from Dgraph.  GraphQL error propagation triggered.","path":["updatePlanet","planet",0,"name"],"locations":[{"line":10,"column":2}]}]}
 ```

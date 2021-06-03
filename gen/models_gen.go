@@ -13,52 +13,52 @@ type AddMoonInput struct {
 }
 
 type AddMoonPayload struct {
-	Moon    []*Moon `json:"moon,omitempty"`
-	NumUids *int    `json:"numUids,omitempty"`
+	Moon    []*Moon `json:"moon"`
+	NumUids *int    `json:"numUids"`
 }
 
 type AddPlanetInput struct {
 	Name  string     `json:"name"`
-	Moons []*MoonRef `json:"moons,omitempty"`
+	Moons []*MoonRef `json:"moons"`
 }
 
 type AddPlanetPayload struct {
-	Planet  []*Planet `json:"planet,omitempty"`
-	NumUids *int      `json:"numUids,omitempty"`
+	Planet  []*Planet `json:"planet"`
+	NumUids *int      `json:"numUids"`
 }
 
 type AuthRule struct {
-	And  []*AuthRule `json:"and,omitempty"`
-	Or   []*AuthRule `json:"or,omitempty"`
-	Not  *AuthRule   `json:"not,omitempty"`
-	Rule *string     `json:"rule,omitempty"`
+	And  []*AuthRule `json:"and"`
+	Or   []*AuthRule `json:"or"`
+	Not  *AuthRule   `json:"not"`
+	Rule *string     `json:"rule"`
 }
 
 type ContainsFilter struct {
-	Point   *PointRef   `json:"point,omitempty"`
-	Polygon *PolygonRef `json:"polygon,omitempty"`
+	Point   *PointRef   `json:"point"`
+	Polygon *PolygonRef `json:"polygon"`
 }
 
 type CustomHTTP struct {
 	URL                  string     `json:"url"`
 	Method               HTTPMethod `json:"method"`
-	Body                 *string    `json:"body,omitempty"`
-	Graphql              *string    `json:"graphql,omitempty"`
-	Mode                 *Mode      `json:"mode,omitempty"`
-	ForwardHeaders       []string   `json:"forwardHeaders,omitempty"`
-	SecretHeaders        []string   `json:"secretHeaders,omitempty"`
-	IntrospectionHeaders []string   `json:"introspectionHeaders,omitempty"`
-	SkipIntrospection    *bool      `json:"skipIntrospection,omitempty"`
+	Body                 *string    `json:"body"`
+	Graphql              *string    `json:"graphql"`
+	Mode                 *Mode      `json:"mode"`
+	ForwardHeaders       []string   `json:"forwardHeaders"`
+	SecretHeaders        []string   `json:"secretHeaders"`
+	IntrospectionHeaders []string   `json:"introspectionHeaders"`
+	SkipIntrospection    *bool      `json:"skipIntrospection"`
 }
 
 type DateTimeFilter struct {
-	Eq      *string        `json:"eq,omitempty"`
-	In      []*string      `json:"in,omitempty"`
-	Le      *string        `json:"le,omitempty"`
-	Lt      *string        `json:"lt,omitempty"`
-	Ge      *string        `json:"ge,omitempty"`
-	Gt      *string        `json:"gt,omitempty"`
-	Between *DateTimeRange `json:"between,omitempty"`
+	Eq      *string        `json:"eq"`
+	In      []*string      `json:"in"`
+	Le      *string        `json:"le"`
+	Lt      *string        `json:"lt"`
+	Ge      *string        `json:"ge"`
+	Gt      *string        `json:"gt"`
+	Between *DateTimeRange `json:"between"`
 }
 
 type DateTimeRange struct {
@@ -67,25 +67,25 @@ type DateTimeRange struct {
 }
 
 type DeleteMoonPayload struct {
-	Moon    []*Moon `json:"moon,omitempty"`
-	Msg     *string `json:"msg,omitempty"`
-	NumUids *int    `json:"numUids,omitempty"`
+	Moon    []*Moon `json:"moon"`
+	Msg     *string `json:"msg"`
+	NumUids *int    `json:"numUids"`
 }
 
 type DeletePlanetPayload struct {
-	Planet  []*Planet `json:"planet,omitempty"`
-	Msg     *string   `json:"msg,omitempty"`
-	NumUids *int      `json:"numUids,omitempty"`
+	Planet  []*Planet `json:"planet"`
+	Msg     *string   `json:"msg"`
+	NumUids *int      `json:"numUids"`
 }
 
 type FloatFilter struct {
-	Eq      *float64    `json:"eq,omitempty"`
-	In      []*float64  `json:"in,omitempty"`
-	Le      *float64    `json:"le,omitempty"`
-	Lt      *float64    `json:"lt,omitempty"`
-	Ge      *float64    `json:"ge,omitempty"`
-	Gt      *float64    `json:"gt,omitempty"`
-	Between *FloatRange `json:"between,omitempty"`
+	Eq      *float64    `json:"eq"`
+	In      []*float64  `json:"in"`
+	Le      *float64    `json:"le"`
+	Lt      *float64    `json:"lt"`
+	Ge      *float64    `json:"ge"`
+	Gt      *float64    `json:"gt"`
+	Between *FloatRange `json:"between"`
 }
 
 type FloatRange struct {
@@ -94,26 +94,26 @@ type FloatRange struct {
 }
 
 type GenerateMutationParams struct {
-	Add    *bool `json:"add,omitempty"`
-	Update *bool `json:"update,omitempty"`
-	Delete *bool `json:"delete,omitempty"`
+	Add    *bool `json:"add"`
+	Update *bool `json:"update"`
+	Delete *bool `json:"delete"`
 }
 
 type GenerateQueryParams struct {
-	Get       *bool `json:"get,omitempty"`
-	Query     *bool `json:"query,omitempty"`
-	Password  *bool `json:"password,omitempty"`
-	Aggregate *bool `json:"aggregate,omitempty"`
+	Get       *bool `json:"get"`
+	Query     *bool `json:"query"`
+	Password  *bool `json:"password"`
+	Aggregate *bool `json:"aggregate"`
 }
 
 type Int64Filter struct {
-	Eq      *string     `json:"eq,omitempty"`
-	In      []*string   `json:"in,omitempty"`
-	Le      *string     `json:"le,omitempty"`
-	Lt      *string     `json:"lt,omitempty"`
-	Ge      *string     `json:"ge,omitempty"`
-	Gt      *string     `json:"gt,omitempty"`
-	Between *Int64Range `json:"between,omitempty"`
+	Eq      *string     `json:"eq"`
+	In      []*string   `json:"in"`
+	Le      *string     `json:"le"`
+	Lt      *string     `json:"lt"`
+	Ge      *string     `json:"ge"`
+	Gt      *string     `json:"gt"`
+	Between *Int64Range `json:"between"`
 }
 
 type Int64Range struct {
@@ -122,13 +122,13 @@ type Int64Range struct {
 }
 
 type IntFilter struct {
-	Eq      *int      `json:"eq,omitempty"`
-	In      []*int    `json:"in,omitempty"`
-	Le      *int      `json:"le,omitempty"`
-	Lt      *int      `json:"lt,omitempty"`
-	Ge      *int      `json:"ge,omitempty"`
-	Gt      *int      `json:"gt,omitempty"`
-	Between *IntRange `json:"between,omitempty"`
+	Eq      *int      `json:"eq"`
+	In      []*int    `json:"in"`
+	Le      *int      `json:"le"`
+	Lt      *int      `json:"lt"`
+	Ge      *int      `json:"ge"`
+	Gt      *int      `json:"gt"`
+	Between *IntRange `json:"between"`
 }
 
 type IntRange struct {
@@ -137,8 +137,8 @@ type IntRange struct {
 }
 
 type IntersectsFilter struct {
-	Polygon      *PolygonRef      `json:"polygon,omitempty"`
-	MultiPolygon *MultiPolygonRef `json:"multiPolygon,omitempty"`
+	Polygon      *PolygonRef      `json:"polygon"`
+	MultiPolygon *MultiPolygonRef `json:"multiPolygon"`
 }
 
 type Moon struct {
@@ -147,83 +147,83 @@ type Moon struct {
 }
 
 type MoonAggregateResult struct {
-	Count   *int    `json:"count,omitempty"`
-	NameMin *string `json:"nameMin,omitempty"`
-	NameMax *string `json:"nameMax,omitempty"`
+	Count   *int    `json:"count"`
+	NameMin *string `json:"nameMin"`
+	NameMax *string `json:"nameMax"`
 }
 
 type MoonFilter struct {
-	ID  []string         `json:"id,omitempty"`
-	Has []*MoonHasFilter `json:"has,omitempty"`
-	And []*MoonFilter    `json:"and,omitempty"`
-	Or  []*MoonFilter    `json:"or,omitempty"`
-	Not *MoonFilter      `json:"not,omitempty"`
+	ID  []string         `json:"id"`
+	Has []*MoonHasFilter `json:"has"`
+	And []*MoonFilter    `json:"and"`
+	Or  []*MoonFilter    `json:"or"`
+	Not *MoonFilter      `json:"not"`
 }
 
 type MoonOrder struct {
-	Asc  *MoonOrderable `json:"asc,omitempty"`
-	Desc *MoonOrderable `json:"desc,omitempty"`
-	Then *MoonOrder     `json:"then,omitempty"`
+	Asc  *MoonOrderable `json:"asc"`
+	Desc *MoonOrderable `json:"desc"`
+	Then *MoonOrder     `json:"then"`
 }
 
 type MoonPatch struct {
-	Name *string `json:"name,omitempty"`
+	Name *string `json:"name"`
 }
 
 type MoonRef struct {
-	ID   *string `json:"id,omitempty"`
-	Name *string `json:"name,omitempty"`
+	ID   *string `json:"id"`
+	Name *string `json:"name"`
 }
 
 type MultiPolygon struct {
-	Polygons []*Polygon `json:"polygons,omitempty"`
+	Polygons []*Polygon `json:"polygons"`
 }
 
 type MultiPolygonRef struct {
-	Polygons []*PolygonRef `json:"polygons,omitempty"`
+	Polygons []*PolygonRef `json:"polygons"`
 }
 
 type NearFilter struct {
 	Distance   float64   `json:"distance"`
-	Coordinate *PointRef `json:"coordinate,omitempty"`
+	Coordinate *PointRef `json:"coordinate"`
 }
 
 type Planet struct {
 	ID             string               `json:"id"`
 	Name           string               `json:"name"`
-	Moons          []*Moon              `json:"moons,omitempty"`
-	MoonsAggregate *MoonAggregateResult `json:"moonsAggregate,omitempty"`
+	Moons          []*Moon              `json:"moons"`
+	MoonsAggregate *MoonAggregateResult `json:"moonsAggregate"`
 }
 
 type PlanetAggregateResult struct {
-	Count   *int    `json:"count,omitempty"`
-	NameMin *string `json:"nameMin,omitempty"`
-	NameMax *string `json:"nameMax,omitempty"`
+	Count   *int    `json:"count"`
+	NameMin *string `json:"nameMin"`
+	NameMax *string `json:"nameMax"`
 }
 
 type PlanetFilter struct {
-	ID  []string           `json:"id,omitempty"`
-	Has []*PlanetHasFilter `json:"has,omitempty"`
-	And []*PlanetFilter    `json:"and,omitempty"`
-	Or  []*PlanetFilter    `json:"or,omitempty"`
-	Not *PlanetFilter      `json:"not,omitempty"`
+	ID  []string           `json:"id"`
+	Has []*PlanetHasFilter `json:"has"`
+	And []*PlanetFilter    `json:"and"`
+	Or  []*PlanetFilter    `json:"or"`
+	Not *PlanetFilter      `json:"not"`
 }
 
 type PlanetOrder struct {
-	Asc  *PlanetOrderable `json:"asc,omitempty"`
-	Desc *PlanetOrderable `json:"desc,omitempty"`
-	Then *PlanetOrder     `json:"then,omitempty"`
+	Asc  *PlanetOrderable `json:"asc"`
+	Desc *PlanetOrderable `json:"desc"`
+	Then *PlanetOrder     `json:"then"`
 }
 
 type PlanetPatch struct {
-	Name  *string    `json:"name,omitempty"`
-	Moons []*MoonRef `json:"moons,omitempty"`
+	Name  *string    `json:"name"`
+	Moons []*MoonRef `json:"moons"`
 }
 
 type PlanetRef struct {
-	ID    *string    `json:"id,omitempty"`
-	Name  *string    `json:"name,omitempty"`
-	Moons []*MoonRef `json:"moons,omitempty"`
+	ID    *string    `json:"id"`
+	Name  *string    `json:"name"`
+	Moons []*MoonRef `json:"moons"`
 }
 
 type Point struct {
@@ -232,16 +232,16 @@ type Point struct {
 }
 
 type PointGeoFilter struct {
-	Near   *NearFilter   `json:"near,omitempty"`
-	Within *WithinFilter `json:"within,omitempty"`
+	Near   *NearFilter   `json:"near"`
+	Within *WithinFilter `json:"within"`
 }
 
 type PointList struct {
-	Points []*Point `json:"points,omitempty"`
+	Points []*Point `json:"points"`
 }
 
 type PointListRef struct {
-	Points []*PointRef `json:"points,omitempty"`
+	Points []*PointRef `json:"points"`
 }
 
 type PointRef struct {
@@ -250,38 +250,38 @@ type PointRef struct {
 }
 
 type Polygon struct {
-	Coordinates []*PointList `json:"coordinates,omitempty"`
+	Coordinates []*PointList `json:"coordinates"`
 }
 
 type PolygonGeoFilter struct {
-	Near       *NearFilter       `json:"near,omitempty"`
-	Within     *WithinFilter     `json:"within,omitempty"`
-	Contains   *ContainsFilter   `json:"contains,omitempty"`
-	Intersects *IntersectsFilter `json:"intersects,omitempty"`
+	Near       *NearFilter       `json:"near"`
+	Within     *WithinFilter     `json:"within"`
+	Contains   *ContainsFilter   `json:"contains"`
+	Intersects *IntersectsFilter `json:"intersects"`
 }
 
 type PolygonRef struct {
-	Coordinates []*PointListRef `json:"coordinates,omitempty"`
+	Coordinates []*PointListRef `json:"coordinates"`
 }
 
 type StringExactFilter struct {
-	Eq      *string      `json:"eq,omitempty"`
-	In      []*string    `json:"in,omitempty"`
-	Le      *string      `json:"le,omitempty"`
-	Lt      *string      `json:"lt,omitempty"`
-	Ge      *string      `json:"ge,omitempty"`
-	Gt      *string      `json:"gt,omitempty"`
-	Between *StringRange `json:"between,omitempty"`
+	Eq      *string      `json:"eq"`
+	In      []*string    `json:"in"`
+	Le      *string      `json:"le"`
+	Lt      *string      `json:"lt"`
+	Ge      *string      `json:"ge"`
+	Gt      *string      `json:"gt"`
+	Between *StringRange `json:"between"`
 }
 
 type StringFullTextFilter struct {
-	Alloftext *string `json:"alloftext,omitempty"`
-	Anyoftext *string `json:"anyoftext,omitempty"`
+	Alloftext *string `json:"alloftext"`
+	Anyoftext *string `json:"anyoftext"`
 }
 
 type StringHashFilter struct {
-	Eq *string   `json:"eq,omitempty"`
-	In []*string `json:"in,omitempty"`
+	Eq *string   `json:"eq"`
+	In []*string `json:"in"`
 }
 
 type StringRange struct {
@@ -290,38 +290,38 @@ type StringRange struct {
 }
 
 type StringRegExpFilter struct {
-	Regexp *string `json:"regexp,omitempty"`
+	Regexp *string `json:"regexp"`
 }
 
 type StringTermFilter struct {
-	Allofterms *string `json:"allofterms,omitempty"`
-	Anyofterms *string `json:"anyofterms,omitempty"`
+	Allofterms *string `json:"allofterms"`
+	Anyofterms *string `json:"anyofterms"`
 }
 
 type UpdateMoonInput struct {
-	Filter *MoonFilter `json:"filter,omitempty"`
-	Set    *MoonPatch  `json:"set,omitempty"`
-	Remove *MoonPatch  `json:"remove,omitempty"`
+	Filter *MoonFilter `json:"filter"`
+	Set    *MoonPatch  `json:"set"`
+	Remove *MoonPatch  `json:"remove"`
 }
 
 type UpdateMoonPayload struct {
-	Moon    []*Moon `json:"moon,omitempty"`
-	NumUids *int    `json:"numUids,omitempty"`
+	Moon    []*Moon `json:"moon"`
+	NumUids *int    `json:"numUids"`
 }
 
 type UpdatePlanetInput struct {
-	Filter *PlanetFilter `json:"filter,omitempty"`
-	Set    *PlanetPatch  `json:"set,omitempty"`
-	Remove *PlanetPatch  `json:"remove,omitempty"`
+	Filter *PlanetFilter `json:"filter"`
+	Set    *PlanetPatch  `json:"set"`
+	Remove *PlanetPatch  `json:"remove"`
 }
 
 type UpdatePlanetPayload struct {
-	Planet  []*Planet `json:"planet,omitempty"`
-	NumUids *int      `json:"numUids,omitempty"`
+	Planet  []*Planet `json:"planet"`
+	NumUids *int      `json:"numUids"`
 }
 
 type WithinFilter struct {
-	Polygon *PolygonRef `json:"polygon,omitempty"`
+	Polygon *PolygonRef `json:"polygon"`
 }
 
 type DgraphIndex string
